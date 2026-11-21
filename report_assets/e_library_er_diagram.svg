@@ -1,0 +1,430 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3200 2100" width="100%" height="100%">
+<defs>
+    <filter id="shadow" x="-8%" y="-8%" width="116%" height="116%" filterUnits="userSpaceOnUse">
+        <feDropShadow dx="1.5" dy="2.5" stdDeviation="2.5" flood-color="#0F172A" flood-opacity="0.14" />
+    </filter>
+    <filter id="shadow-sm" x="-8%" y="-8%" width="116%" height="116%" filterUnits="userSpaceOnUse">
+        <feDropShadow dx="1.0" dy="1.5" stdDeviation="1.5" flood-color="#0F172A" flood-opacity="0.08" />
+    </filter>
+</defs>
+
+<!-- Pure White Architectural Canvas -->
+<rect width="3200" height="2100" fill="#FFFFFF" />
+
+<!-- Outer Border -->
+<rect x="20" y="20" width="3160" height="2060" rx="12" fill="none" stroke="#E2E8F0" stroke-width="2" />
+
+<!-- Clean Simple Centered Title (Exact match to original image style) -->
+<text x="1600.0" y="75" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="28" font-weight="bold" fill="#0F172A" text-anchor="middle" letter-spacing="1.5">
+    E-LIBRARY DBMS - ENTITY-RELATIONSHIP DIAGRAM
+</text>
+
+<!-- 1. Connections Layer -->
+<g id="connections-layer">
+    <line x1="400" y1="240" x2="730" y2="240" stroke="#475569" stroke-width="2.0" />
+    <line x1="730" y1="240" x2="1060" y2="240" stroke="#475569" stroke-width="2.0" />
+    <line x1="1060" y1="240" x2="1480" y2="420" stroke="#475569" stroke-width="2.0" />
+    <line x1="1480" y1="420" x2="1950" y2="640" stroke="#475569" stroke-width="2.0" />
+    <line x1="1660" y1="240" x2="1820" y2="420" stroke="#475569" stroke-width="2.0" />
+    <line x1="1820" y1="420" x2="1950" y2="640" stroke="#475569" stroke-width="2.0" />
+    <line x1="2260" y1="240" x2="2140" y2="420" stroke="#475569" stroke-width="2.0" />
+    <line x1="2140" y1="420" x2="1950" y2="640" stroke="#475569" stroke-width="2.0" />
+    <line x1="2820" y1="480" x2="2420" y2="560" stroke="#475569" stroke-width="2.0" />
+    <line x1="2420" y1="560" x2="1950" y2="640" stroke="#475569" stroke-width="2.0" />
+    <line x1="1950" y1="640" x2="1950" y2="830" stroke="#475569" stroke-width="2.0" />
+    <line x1="1947.0" y1="830.0" x2="1947.0" y2="1020.0" stroke="#475569" stroke-width="1.8" />
+    <line x1="1953.0" y1="830.0" x2="1953.0" y2="1020.0" stroke="#475569" stroke-width="1.8" />
+    <line x1="400" y1="240" x2="400" y2="480" stroke="#475569" stroke-width="2.0" />
+    <line x1="400" y1="480" x2="900" y2="1160" stroke="#475569" stroke-width="2.0" />
+    <line x1="400" y1="720" x2="620" y2="920" stroke="#475569" stroke-width="2.0" />
+    <line x1="620" y1="920" x2="900" y2="1160" stroke="#475569" stroke-width="2.0" />
+    <line x1="400" y1="720" x2="400" y2="1000" stroke="#475569" stroke-width="2.0" />
+    <line x1="400" y1="1000" x2="900" y2="1160" stroke="#475569" stroke-width="2.0" />
+    <line x1="900" y1="1160" x2="650" y2="1450" stroke="#475569" stroke-width="2.0" />
+    <line x1="650" y1="1450" x2="650" y2="1750" stroke="#475569" stroke-width="2.0" />
+    <path d="M 650,1750 L 1060,1430 A 15,15 0 0,1 1084,1412 L 1150,1360" fill="none" stroke="#475569" stroke-width="2.0" />
+    <line x1="1150" y1="1360" x2="1950" y2="1020" stroke="#475569" stroke-width="2.0" />
+    <line x1="900" y1="1160" x2="1150" y2="1540" stroke="#475569" stroke-width="2.0" />
+    <line x1="1150" y1="1540" x2="1420" y2="1750" stroke="#475569" stroke-width="2.0" />
+    <line x1="1420" y1="1750" x2="1680" y2="1380" stroke="#475569" stroke-width="2.0" />
+    <line x1="1680" y1="1380" x2="1950" y2="1020" stroke="#475569" stroke-width="2.0" />
+    <line x1="1420" y1="1750" x2="1735" y2="1750" stroke="#475569" stroke-width="2.0" />
+    <line x1="1735" y1="1750" x2="2050" y2="1750" stroke="#475569" stroke-width="2.0" />
+    <line x1="900" y1="1160" x2="1550" y2="1260" stroke="#475569" stroke-width="2.0" />
+    <line x1="1550" y1="1260" x2="2050" y2="1750" stroke="#475569" stroke-width="2.0" />
+    <line x1="2050" y1="1750" x2="2365" y2="1750" stroke="#475569" stroke-width="2.0" />
+    <line x1="2365" y1="1750" x2="2680" y2="1750" stroke="#475569" stroke-width="2.0" />
+    <line x1="2680" y1="1750" x2="2380" y2="1450" stroke="#475569" stroke-width="2.0" />
+    <polyline points="2380,1450 1800,1340 900,1160" fill="none" stroke="#475569" stroke-width="2.0" stroke-linejoin="round" />
+    <line x1="400" y1="240" x2="230" y2="140" stroke="#64748B" stroke-width="1.4" />
+    <line x1="400" y1="240" x2="350" y2="120" stroke="#64748B" stroke-width="1.4" />
+    <line x1="400" y1="240" x2="475" y2="120" stroke="#64748B" stroke-width="1.4" />
+    <line x1="400" y1="240" x2="595" y2="140" stroke="#64748B" stroke-width="1.4" />
+    <line x1="1060" y1="240" x2="890" y2="140" stroke="#64748B" stroke-width="1.4" />
+    <line x1="1060" y1="240" x2="1010" y2="120" stroke="#64748B" stroke-width="1.4" />
+    <line x1="1060" y1="240" x2="1140" y2="120" stroke="#64748B" stroke-width="1.4" />
+    <line x1="1060" y1="240" x2="1260" y2="140" stroke="#64748B" stroke-width="1.4" />
+    <line x1="1660" y1="240" x2="1580" y2="135" stroke="#64748B" stroke-width="1.4" />
+    <line x1="1660" y1="240" x2="1740" y2="135" stroke="#64748B" stroke-width="1.4" />
+    <line x1="2260" y1="240" x2="2160" y2="135" stroke="#64748B" stroke-width="1.4" />
+    <line x1="2260" y1="240" x2="2360" y2="135" stroke="#64748B" stroke-width="1.4" />
+    <line x1="2820" y1="480" x2="3010" y2="420" stroke="#64748B" stroke-width="1.4" />
+    <line x1="2820" y1="480" x2="3040" y2="480" stroke="#64748B" stroke-width="1.4" />
+    <line x1="2820" y1="480" x2="3010" y2="540" stroke="#64748B" stroke-width="1.4" />
+    <line x1="1950" y1="640" x2="1670" y2="530" stroke="#64748B" stroke-width="1.4" />
+    <line x1="1950" y1="640" x2="1640" y2="585" stroke="#64748B" stroke-width="1.4" />
+    <line x1="1950" y1="640" x2="1630" y2="640" stroke="#64748B" stroke-width="1.4" />
+    <line x1="1950" y1="640" x2="1630" y2="690" stroke="#64748B" stroke-width="1.4" />
+    <line x1="1950" y1="640" x2="1650" y2="740" stroke="#64748B" stroke-width="1.4" />
+    <line x1="1950" y1="640" x2="1700" y2="790" stroke="#64748B" stroke-width="1.4" />
+    <line x1="1950" y1="640" x2="1770" y2="835" stroke="#64748B" stroke-width="1.4" />
+    <line x1="1950" y1="1020" x2="2180" y2="940" stroke="#64748B" stroke-width="1.4" />
+    <line x1="1950" y1="1020" x2="2210" y2="995" stroke="#64748B" stroke-width="1.4" />
+    <line x1="1950" y1="1020" x2="2210" y2="1050" stroke="#64748B" stroke-width="1.4" />
+    <line x1="1950" y1="1020" x2="2180" y2="1105" stroke="#64748B" stroke-width="1.4" />
+    <line x1="400" y1="720" x2="220" y2="600" stroke="#64748B" stroke-width="1.4" />
+    <line x1="400" y1="720" x2="190" y2="650" stroke="#64748B" stroke-width="1.4" />
+    <line x1="400" y1="720" x2="180" y2="700" stroke="#64748B" stroke-width="1.4" />
+    <line x1="400" y1="720" x2="180" y2="750" stroke="#64748B" stroke-width="1.4" />
+    <line x1="400" y1="720" x2="200" y2="800" stroke="#64748B" stroke-width="1.4" />
+    <line x1="400" y1="720" x2="230" y2="850" stroke="#64748B" stroke-width="1.4" />
+    <line x1="900" y1="1160" x2="680" y2="1030" stroke="#64748B" stroke-width="1.4" />
+    <line x1="900" y1="1160" x2="790" y2="990" stroke="#64748B" stroke-width="1.4" />
+    <line x1="900" y1="1160" x2="900" y2="975" stroke="#64748B" stroke-width="1.4" />
+    <line x1="900" y1="1160" x2="1010" y2="990" stroke="#64748B" stroke-width="1.4" />
+    <line x1="900" y1="1160" x2="1120" y2="1030" stroke="#64748B" stroke-width="1.4" />
+    <line x1="900" y1="1160" x2="1145" y2="1105" stroke="#64748B" stroke-width="1.4" />
+    <line x1="900" y1="1160" x2="1155" y2="1165" stroke="#64748B" stroke-width="1.4" />
+    <line x1="900" y1="1160" x2="1145" y2="1225" stroke="#64748B" stroke-width="1.4" />
+    <line x1="900" y1="1160" x2="840" y2="1330" stroke="#64748B" stroke-width="1.4" />
+    <line x1="900" y1="1160" x2="980" y2="1260" stroke="#64748B" stroke-width="1.4" />
+    <line x1="650" y1="1750" x2="450" y2="1860" stroke="#64748B" stroke-width="1.4" />
+    <line x1="650" y1="1750" x2="585" y2="1895" stroke="#64748B" stroke-width="1.4" />
+    <line x1="650" y1="1750" x2="715" y2="1895" stroke="#64748B" stroke-width="1.4" />
+    <line x1="650" y1="1750" x2="845" y2="1860" stroke="#64748B" stroke-width="1.4" />
+    <line x1="1420" y1="1750" x2="1230" y2="1860" stroke="#64748B" stroke-width="1.4" />
+    <line x1="1420" y1="1750" x2="1360" y2="1895" stroke="#64748B" stroke-width="1.4" />
+    <line x1="1420" y1="1750" x2="1480" y2="1895" stroke="#64748B" stroke-width="1.4" />
+    <line x1="1420" y1="1750" x2="1610" y2="1860" stroke="#64748B" stroke-width="1.4" />
+    <line x1="2050" y1="1750" x2="1870" y2="1860" stroke="#64748B" stroke-width="1.4" />
+    <line x1="2050" y1="1750" x2="1980" y2="1900" stroke="#64748B" stroke-width="1.4" />
+    <line x1="2050" y1="1750" x2="2070" y2="1960" stroke="#64748B" stroke-width="1.4" />
+    <line x1="2050" y1="1750" x2="2160" y2="1900" stroke="#64748B" stroke-width="1.4" />
+    <line x1="2050" y1="1750" x2="2270" y2="1860" stroke="#64748B" stroke-width="1.4" />
+    <line x1="2680" y1="1750" x2="2520" y2="1860" stroke="#64748B" stroke-width="1.4" />
+    <line x1="2680" y1="1750" x2="2680" y2="1895" stroke="#64748B" stroke-width="1.4" />
+    <line x1="2680" y1="1750" x2="2840" y2="1860" stroke="#64748B" stroke-width="1.4" />
+    <line x1="2820" y1="1020" x2="2680" y2="930" stroke="#64748B" stroke-width="1.4" />
+    <line x1="2820" y1="1020" x2="2820" y2="910" stroke="#64748B" stroke-width="1.4" />
+    <line x1="2820" y1="1020" x2="2970" y2="930" stroke="#64748B" stroke-width="1.4" />
+    <line x1="2820" y1="1020" x2="3000" y2="1020" stroke="#64748B" stroke-width="1.4" />
+    <line x1="2820" y1="1020" x2="2960" y2="1110" stroke="#64748B" stroke-width="1.4" />
+    <line x1="400" y1="1000" x2="400" y2="1100" stroke="#64748B" stroke-width="1.4" />
+</g>
+
+<!-- 2. Relationships Layer -->
+<g id="relationships-layer">
+    <polygon points="730,210 782,240 730,270 678,240" fill="#FEF3C7" stroke="#D97706" stroke-width="2.0" filter="url(#shadow)" />
+    <text x="730" y="244" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#92400E" text-anchor="middle">OFFERS</text>
+    <polygon points="1480,388 1542,420 1480,452 1418,420" fill="#FEF3C7" stroke="#D97706" stroke-width="2.0" filter="url(#shadow)" />
+    <text x="1480" y="417" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#92400E" text-anchor="middle">BELONGS</text>
+    <text x="1480" y="431" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#92400E" text-anchor="middle">TO</text>
+    <polygon points="1820,388 1885,420 1820,452 1755,420" fill="#FEF3C7" stroke="#D97706" stroke-width="2.0" filter="url(#shadow)" />
+    <text x="1820" y="424" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#92400E" text-anchor="middle">CATEGORIZED</text>
+    <polygon points="2140,388 2205,420 2140,452 2075,420" fill="#FEF3C7" stroke="#D97706" stroke-width="2.0" filter="url(#shadow)" />
+    <text x="2140" y="417" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#92400E" text-anchor="middle">PUBLISHED</text>
+    <text x="2140" y="431" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#92400E" text-anchor="middle">BY</text>
+    <polygon points="2420,528 2480,560 2420,592 2360,560" fill="#FEF3C7" stroke="#D97706" stroke-width="2.0" filter="url(#shadow)" />
+    <text x="2420" y="557" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#92400E" text-anchor="middle">WRITTEN</text>
+    <text x="2420" y="571" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#92400E" text-anchor="middle">BY</text>
+    <polygon points="1950,791 2018,830 1950,869 1882,830" fill="#FEF3C7" stroke="#B45309" stroke-width="1.6" filter="url(#shadow)" />
+    <polygon points="1950,796 2012,830 1950,864 1888,830" fill="#FEF3C7" stroke="#D97706" stroke-width="2.0" />
+    <text x="1950" y="827" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#92400E" text-anchor="middle">HAS</text>
+    <text x="1950" y="841" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#92400E" text-anchor="middle">COPIES</text>
+    <polygon points="400,446 472,480 400,514 328,480" fill="#FEF3C7" stroke="#D97706" stroke-width="2.0" filter="url(#shadow)" />
+    <text x="400" y="477" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#92400E" text-anchor="middle">ASSOCIATED</text>
+    <text x="400" y="491" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#92400E" text-anchor="middle">WITH</text>
+    <polygon points="620,888 685,920 620,952 555,920" fill="#FEF3C7" stroke="#D97706" stroke-width="2.0" filter="url(#shadow)" />
+    <text x="620" y="917" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#92400E" text-anchor="middle">SUGGESTED</text>
+    <text x="620" y="931" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#92400E" text-anchor="middle">BY</text>
+    <polygon points="400,970 455,1000 400,1030 345,1000" fill="#FEF3C7" stroke="#D97706" stroke-width="2.0" filter="url(#shadow)" />
+    <text x="400" y="997" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#92400E" text-anchor="middle">VOTES</text>
+    <text x="400" y="1011" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#92400E" text-anchor="middle">ON</text>
+    <polygon points="650,1418 715,1450 650,1482 585,1450" fill="#FEF3C7" stroke="#D97706" stroke-width="2.0" filter="url(#shadow)" />
+    <text x="650" y="1447" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#92400E" text-anchor="middle">RESERVES</text>
+    <text x="650" y="1461" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#92400E" text-anchor="middle">USER</text>
+    <polygon points="1150,1328 1215,1360 1150,1392 1085,1360" fill="#FEF3C7" stroke="#D97706" stroke-width="2.0" filter="url(#shadow)" />
+    <text x="1150" y="1357" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#92400E" text-anchor="middle">RESERVES</text>
+    <text x="1150" y="1371" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#92400E" text-anchor="middle">COPY</text>
+    <polygon points="1150,1508 1215,1540 1150,1572 1085,1540" fill="#FEF3C7" stroke="#D97706" stroke-width="2.0" filter="url(#shadow)" />
+    <text x="1150" y="1537" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#92400E" text-anchor="middle">BORROWS</text>
+    <text x="1150" y="1551" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#92400E" text-anchor="middle">USER</text>
+    <polygon points="1680,1348 1745,1380 1680,1412 1615,1380" fill="#FEF3C7" stroke="#D97706" stroke-width="2.0" filter="url(#shadow)" />
+    <text x="1680" y="1377" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#92400E" text-anchor="middle">BORROWS</text>
+    <text x="1680" y="1391" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#92400E" text-anchor="middle">COPY</text>
+    <polygon points="1735,1720 1793,1750 1735,1780 1677,1750" fill="#FEF3C7" stroke="#D97706" stroke-width="2.0" filter="url(#shadow)" />
+    <text x="1735" y="1747" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#92400E" text-anchor="middle">INCURRED</text>
+    <text x="1735" y="1761" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#92400E" text-anchor="middle">BY</text>
+    <polygon points="1550,1230 1605,1260 1550,1290 1495,1260" fill="#FEF3C7" stroke="#D97706" stroke-width="2.0" filter="url(#shadow)" />
+    <text x="1550" y="1257" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#92400E" text-anchor="middle">OWED</text>
+    <text x="1550" y="1271" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#92400E" text-anchor="middle">BY</text>
+    <polygon points="2365,1720 2423,1750 2365,1780 2307,1750" fill="#FEF3C7" stroke="#D97706" stroke-width="2.0" filter="url(#shadow)" />
+    <text x="2365" y="1747" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#92400E" text-anchor="middle">SETTLED</text>
+    <text x="2365" y="1761" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#92400E" text-anchor="middle">IN</text>
+    <polygon points="2380,1418 2445,1450 2380,1482 2315,1450" fill="#FEF3C7" stroke="#D97706" stroke-width="2.0" filter="url(#shadow)" />
+    <text x="2380" y="1447" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#92400E" text-anchor="middle">COLLECTED</text>
+    <text x="2380" y="1461" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#92400E" text-anchor="middle">BY</text>
+</g>
+
+<!-- 3. Entities Layer -->
+<g id="entities-layer">
+    <rect x="320.0" y="212.0" width="160" height="56" rx="6" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2.4" filter="url(#shadow)" />
+    <text x="400" y="245" font-family="'Segoe UI', Arial, sans-serif" font-size="13.5" font-weight="bold" fill="#1B5E20" text-anchor="middle" letter-spacing="0.6">BRANCHES</text>
+    <rect x="980.0" y="212.0" width="160" height="56" rx="6" fill="#E0F2F1" stroke="#00695C" stroke-width="2.4" filter="url(#shadow)" />
+    <text x="1060" y="245" font-family="'Segoe UI', Arial, sans-serif" font-size="13.5" font-weight="bold" fill="#004D40" text-anchor="middle" letter-spacing="0.6">SUBJECTS</text>
+    <rect x="1585.0" y="212.0" width="150" height="56" rx="6" fill="#F3E5F5" stroke="#6A1B9A" stroke-width="2.4" filter="url(#shadow)" />
+    <text x="1660" y="245" font-family="'Segoe UI', Arial, sans-serif" font-size="13.5" font-weight="bold" fill="#4A148C" text-anchor="middle" letter-spacing="0.6">GENRES</text>
+    <rect x="2180.0" y="212.0" width="160" height="56" rx="6" fill="#FCE4EC" stroke="#AD1457" stroke-width="2.4" filter="url(#shadow)" />
+    <text x="2260" y="245" font-family="'Segoe UI', Arial, sans-serif" font-size="13.5" font-weight="bold" fill="#880E4F" text-anchor="middle" letter-spacing="0.6">PUBLISHERS</text>
+    <rect x="2745.0" y="452.0" width="150" height="56" rx="6" fill="#E1F5FE" stroke="#0277BD" stroke-width="2.4" filter="url(#shadow)" />
+    <text x="2820" y="485" font-family="'Segoe UI', Arial, sans-serif" font-size="13.5" font-weight="bold" fill="#01579B" text-anchor="middle" letter-spacing="0.6">AUTHORS</text>
+    <rect x="1860.0" y="608.0" width="180" height="64" rx="6" fill="#FFEBEE" stroke="#C62828" stroke-width="2.4" filter="url(#shadow)" />
+    <text x="1950" y="645" font-family="'Segoe UI', Arial, sans-serif" font-size="13.5" font-weight="bold" fill="#B71C1C" text-anchor="middle" letter-spacing="0.6">BOOKS</text>
+    <rect x="1855.0" y="985.0" width="190" height="70" rx="8" fill="#EDE7F6" stroke="#4527A0" stroke-width="1.6" filter="url(#shadow)" />
+    <rect x="1860.0" y="990.0" width="180" height="60" rx="6" fill="#EDE7F6" stroke="#4527A0" stroke-width="2.2" />
+    <text x="1950" y="1025" font-family="'Segoe UI', Arial, sans-serif" font-size="13.5" font-weight="bold" fill="#311B92" text-anchor="middle" letter-spacing="0.6">BOOK_COPIES</text>
+    <rect x="2735.0" y="990.0" width="170" height="60" rx="6" fill="#ECEFF1" stroke="#37474F" stroke-width="2.4" filter="url(#shadow)" />
+    <text x="2820" y="1025" font-family="'Segoe UI', Arial, sans-serif" font-size="13.5" font-weight="bold" fill="#263238" text-anchor="middle" letter-spacing="0.6">AUDIT_LOGS</text>
+    <rect x="310.0" y="690.0" width="180" height="60" rx="6" fill="#E8F8F5" stroke="#117A65" stroke-width="2.4" filter="url(#shadow)" />
+    <text x="400" y="725" font-family="'Segoe UI', Arial, sans-serif" font-size="13.5" font-weight="bold" fill="#0E6251" text-anchor="middle" letter-spacing="0.6">BOOK_REQUESTS</text>
+    <rect x="810.0" y="1128.0" width="180" height="64" rx="6" fill="#FFF8E1" stroke="#F57F17" stroke-width="2.4" filter="url(#shadow)" />
+    <text x="900" y="1165" font-family="'Segoe UI', Arial, sans-serif" font-size="13.5" font-weight="bold" fill="#E65100" text-anchor="middle" letter-spacing="0.6">USERS</text>
+    <rect x="560.0" y="1720.0" width="180" height="60" rx="6" fill="#FFF3E0" stroke="#E65100" stroke-width="2.4" filter="url(#shadow)" />
+    <text x="650" y="1755" font-family="'Segoe UI', Arial, sans-serif" font-size="13.5" font-weight="bold" fill="#BF360C" text-anchor="middle" letter-spacing="0.6">RESERVATIONS</text>
+    <rect x="1335.0" y="1720.0" width="170" height="60" rx="6" fill="#FBE9E7" stroke="#BF360C" stroke-width="2.4" filter="url(#shadow)" />
+    <text x="1420" y="1755" font-family="'Segoe UI', Arial, sans-serif" font-size="13.5" font-weight="bold" fill="#870000" text-anchor="middle" letter-spacing="0.6">LOANS</text>
+    <rect x="1970.0" y="1720.0" width="160" height="60" rx="6" fill="#FFEBEE" stroke="#B71C1C" stroke-width="2.4" filter="url(#shadow)" />
+    <text x="2050" y="1755" font-family="'Segoe UI', Arial, sans-serif" font-size="13.5" font-weight="bold" fill="#7F0000" text-anchor="middle" letter-spacing="0.6">FINES</text>
+    <rect x="2585.0" y="1720.0" width="190" height="60" rx="6" fill="#EFEBE9" stroke="#4E342E" stroke-width="2.4" filter="url(#shadow)" />
+    <text x="2680" y="1755" font-family="'Segoe UI', Arial, sans-serif" font-size="13.5" font-weight="bold" fill="#3E2723" text-anchor="middle" letter-spacing="0.6">FINE_COLLECTIONS</text>
+</g>
+
+<!-- 4. Attributes Layer -->
+<g id="attributes-layer">
+    <ellipse cx="230" cy="140" rx="50.0" ry="17.0" fill="#F1F8E9" stroke="#33691E" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="230" y="144" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#0F172A" text-anchor="middle">branch_id</text>
+    <line x1="199.4" y1="146.5" x2="260.6" y2="146.5" stroke="#0F172A" stroke-width="1.3" />
+    <ellipse cx="350" cy="120" rx="55.0" ry="17.0" fill="#F1F8E9" stroke="#33691E" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="350" y="124" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">branch_code</text>
+    <ellipse cx="475" cy="120" rx="57.5" ry="17.0" fill="#F1F8E9" stroke="#33691E" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="475" y="124" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">branch_name</text>
+    <ellipse cx="595" cy="140" rx="50.0" ry="17.0" fill="#F1F8E9" stroke="#33691E" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="595" y="144" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">hod_name</text>
+    <ellipse cx="890" cy="140" rx="50.0" ry="17.0" fill="#E0F7FA" stroke="#00838F" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="890" y="144" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#0F172A" text-anchor="middle">subject_id</text>
+    <line x1="856.0" y1="146.5" x2="924.0" y2="146.5" stroke="#0F172A" stroke-width="1.3" />
+    <ellipse cx="1010" cy="120" rx="57.5" ry="17.0" fill="#E0F7FA" stroke="#00838F" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="1010" y="124" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">subject_code</text>
+    <ellipse cx="1140" cy="120" rx="60.0" ry="17.0" fill="#E0F7FA" stroke="#00838F" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="1140" y="124" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">subject_name</text>
+    <ellipse cx="1260" cy="140" rx="47.5" ry="17.0" fill="#E0F7FA" stroke="#00838F" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="1260" y="144" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">semester</text>
+    <ellipse cx="1580" cy="135" rx="47.5" ry="17.0" fill="#F8BBD0" stroke="#880E4F" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="1580" y="139" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#0F172A" text-anchor="middle">genre_id</text>
+    <line x1="1552.8" y1="141.5" x2="1607.2" y2="141.5" stroke="#0F172A" stroke-width="1.3" />
+    <ellipse cx="1740" cy="135" rx="55.0" ry="17.0" fill="#F8BBD0" stroke="#880E4F" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="1740" y="139" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">genre_name</text>
+    <ellipse cx="2160" cy="135" rx="55.0" ry="17.0" fill="#F8BBD0" stroke="#C2185B" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="2160" y="139" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#0F172A" text-anchor="middle">publisher_id</text>
+    <line x1="2119.2" y1="141.5" x2="2200.8" y2="141.5" stroke="#0F172A" stroke-width="1.3" />
+    <ellipse cx="2360" cy="135" rx="62.5" ry="17.0" fill="#F8BBD0" stroke="#C2185B" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="2360" y="139" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">publisher_name</text>
+    <ellipse cx="3010" cy="420" rx="50.0" ry="17.0" fill="#E0F7FA" stroke="#0288D1" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="3010" y="424" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#0F172A" text-anchor="middle">author_id</text>
+    <line x1="2979.4" y1="426.5" x2="3040.6" y2="426.5" stroke="#0F172A" stroke-width="1.3" />
+    <ellipse cx="3040" cy="480" rx="57.5" ry="17.0" fill="#E0F7FA" stroke="#0288D1" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="3040" y="484" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">author_name</text>
+    <ellipse cx="3010" cy="540" rx="50.0" ry="17.0" fill="#E0F7FA" stroke="#0288D1" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="3010" y="544" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">country</text>
+    <ellipse cx="1670" cy="530" rx="47.5" ry="17.0" fill="#FFCDD2" stroke="#D32F2F" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="1670" y="534" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#0F172A" text-anchor="middle">book_id</text>
+    <line x1="1646.2" y1="536.5" x2="1693.8" y2="536.5" stroke="#0F172A" stroke-width="1.3" />
+    <ellipse cx="1640" cy="585" rx="45.0" ry="17.0" fill="#FFCDD2" stroke="#D32F2F" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="1640" y="589" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">title</text>
+    <ellipse cx="1630" cy="640" rx="45.0" ry="17.0" fill="#FFCDD2" stroke="#D32F2F" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="1630" y="644" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">isbn</text>
+    <ellipse cx="1630" cy="690" rx="45.0" ry="17.0" fill="#FFCDD2" stroke="#D32F2F" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="1630" y="694" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">edition</text>
+    <ellipse cx="1650" cy="740" rx="47.5" ry="17.0" fill="#FFCDD2" stroke="#D32F2F" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="1650" y="744" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">pub_year</text>
+    <ellipse cx="1700" cy="790" rx="45.0" ry="17.0" fill="#FFCDD2" stroke="#D32F2F" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="1700" y="794" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">rating</text>
+    <ellipse cx="1770" cy="835" rx="52.5" ry="17.0" fill="#FFCDD2" stroke="#D32F2F" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="1770" y="839" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">description</text>
+    <ellipse cx="2180" cy="940" rx="50.0" ry="17.0" fill="#D1C4E9" stroke="#512DA8" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="2180" y="944" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#0F172A" text-anchor="middle">copy_id</text>
+    <line x1="2156.2" y1="946.5" x2="2203.8" y2="946.5" stroke="#0F172A" stroke-width="1.3" />
+    <ellipse cx="2210" cy="995" rx="55.0" ry="17.0" fill="#D1C4E9" stroke="#512DA8" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="2210" y="999" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">copy_code</text>
+    <ellipse cx="2210" cy="1050" rx="45.0" ry="17.0" fill="#D1C4E9" stroke="#512DA8" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="2210" y="1054" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">status</text>
+    <ellipse cx="2180" cy="1105" rx="60.0" ry="17.0" fill="#D1C4E9" stroke="#512DA8" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="2180" y="1109" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">rack_location</text>
+    <ellipse cx="220" cy="600" rx="52.5" ry="17.0" fill="#D5F5E3" stroke="#1E8449" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="220" y="604" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#0F172A" text-anchor="middle">request_id</text>
+    <line x1="186.0" y1="606.5" x2="254.0" y2="606.5" stroke="#0F172A" stroke-width="1.3" />
+    <ellipse cx="190" cy="650" rx="45.0" ry="17.0" fill="#D5F5E3" stroke="#1E8449" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="190" y="654" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">title</text>
+    <ellipse cx="180" cy="700" rx="45.0" ry="17.0" fill="#D5F5E3" stroke="#1E8449" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="180" y="704" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">author</text>
+    <ellipse cx="180" cy="750" rx="55.0" ry="17.0" fill="#D5F5E3" stroke="#1E8449" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="180" y="754" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">votes_count</text>
+    <ellipse cx="200" cy="800" rx="45.0" ry="17.0" fill="#D5F5E3" stroke="#1E8449" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="200" y="804" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">status</text>
+    <ellipse cx="230" cy="850" rx="52.5" ry="17.0" fill="#D5F5E3" stroke="#1E8449" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="230" y="854" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">created_at</text>
+    <ellipse cx="680" cy="1030" rx="47.5" ry="17.0" fill="#FFFDE7" stroke="#FBC02D" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="680" y="1034" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#0F172A" text-anchor="middle">user_id</text>
+    <line x1="656.2" y1="1036.5" x2="703.8" y2="1036.5" stroke="#0F172A" stroke-width="1.3" />
+    <ellipse cx="790" cy="990" rx="45.0" ry="17.0" fill="#FFFDE7" stroke="#FBC02D" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="790" y="994" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">usn</text>
+    <ellipse cx="900" cy="975" rx="45.0" ry="17.0" fill="#FFFDE7" stroke="#FBC02D" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="900" y="979" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">name</text>
+    <ellipse cx="1010" cy="990" rx="45.0" ry="17.0" fill="#FFFDE7" stroke="#FBC02D" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="1010" y="994" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">email</text>
+    <ellipse cx="1120" cy="1030" rx="50.0" ry="17.0" fill="#FFFDE7" stroke="#FBC02D" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="1120" y="1034" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">password</text>
+    <ellipse cx="1145" cy="1105" rx="42.5" ry="17.0" fill="#FFFDE7" stroke="#FBC02D" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="1145" y="1109" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">role</text>
+    <ellipse cx="1155" cy="1165" rx="47.5" ry="17.0" fill="#FFFDE7" stroke="#FBC02D" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="1155" y="1169" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">semester</text>
+    <ellipse cx="1145" cy="1225" rx="45.0" ry="17.0" fill="#FFFDE7" stroke="#FBC02D" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="1145" y="1229" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">phone</text>
+    <ellipse cx="840" cy="1330" rx="87.5" ry="17.0" fill="#FFFDE7" stroke="#FBC02D" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="840" y="1334" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">reservation_blocked_until</text>
+    <ellipse cx="980" cy="1260" rx="52.5" ry="17.0" fill="#FFFDE7" stroke="#FBC02D" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="980" y="1264" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">created_at</text>
+    <ellipse cx="450" cy="1860" rx="62.5" ry="17.0" fill="#FFE0B2" stroke="#F57C00" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="450" y="1864" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#0F172A" text-anchor="middle">reservation_id</text>
+    <line x1="402.4" y1="1866.5" x2="497.6" y2="1866.5" stroke="#0F172A" stroke-width="1.3" />
+    <ellipse cx="585" cy="1895" rx="55.0" ry="17.0" fill="#FFE0B2" stroke="#F57C00" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="585" y="1899" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">reserved_at</text>
+    <ellipse cx="715" cy="1895" rx="52.5" ry="17.0" fill="#FFE0B2" stroke="#F57C00" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="715" y="1899" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">expires_at</text>
+    <ellipse cx="845" cy="1860" rx="45.0" ry="17.0" fill="#FFE0B2" stroke="#F57C00" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="845" y="1864" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">status</text>
+    <ellipse cx="1230" cy="1860" rx="47.5" ry="17.0" fill="#FFCCBC" stroke="#D84315" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="1230" y="1864" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#0F172A" text-anchor="middle">loan_id</text>
+    <line x1="1206.2" y1="1866.5" x2="1253.8" y2="1866.5" stroke="#0F172A" stroke-width="1.3" />
+    <ellipse cx="1360" cy="1895" rx="55.0" ry="17.0" fill="#FFCCBC" stroke="#D84315" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="1360" y="1899" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">borrow_date</text>
+    <ellipse cx="1480" cy="1895" rx="52.5" ry="17.0" fill="#FFCCBC" stroke="#D84315" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="1480" y="1899" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">due_date</text>
+    <ellipse cx="1610" cy="1860" rx="55.0" ry="17.0" fill="#FFCCBC" stroke="#D84315" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="1610" y="1864" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">return_date</text>
+    <ellipse cx="1870" cy="1860" rx="47.5" ry="17.0" fill="#FFCDD2" stroke="#C62828" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="1870" y="1864" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#0F172A" text-anchor="middle">fine_id</text>
+    <line x1="1846.2" y1="1866.5" x2="1893.8" y2="1866.5" stroke="#0F172A" stroke-width="1.3" />
+    <ellipse cx="1980" cy="1900" rx="45.0" ry="17.0" fill="#FFCDD2" stroke="#C62828" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="1980" y="1904" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">amount</text>
+    <ellipse cx="2070" cy="1960" rx="55.0" ry="17.0" fill="#FFCDD2" stroke="#C62828" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="2070" y="1964" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">assessed_at</text>
+    <ellipse cx="2160" cy="1900" rx="57.5" ry="17.0" fill="#FFCDD2" stroke="#C62828" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="2160" y="1904" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">days_overdue</text>
+    <ellipse cx="2270" cy="1860" rx="45.0" ry="17.0" fill="#FFCDD2" stroke="#C62828" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="2270" y="1864" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">status</text>
+    <ellipse cx="2520" cy="1860" rx="57.5" ry="17.0" fill="#D7CCC8" stroke="#5D4037" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="2520" y="1864" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#0F172A" text-anchor="middle">collection_id</text>
+    <line x1="2475.8" y1="1866.5" x2="2564.2" y2="1866.5" stroke="#0F172A" stroke-width="1.3" />
+    <ellipse cx="2680" cy="1895" rx="57.5" ry="17.0" fill="#D7CCC8" stroke="#5D4037" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="2680" y="1899" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">amount_paid</text>
+    <ellipse cx="2840" cy="1860" rx="65.0" ry="17.0" fill="#D7CCC8" stroke="#5D4037" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="2840" y="1864" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">collection_date</text>
+    <ellipse cx="2680" cy="930" rx="45.0" ry="17.0" fill="#CFD8DC" stroke="#455A64" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="2680" y="934" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#0F172A" text-anchor="middle">log_id</text>
+    <line x1="2659.6" y1="936.5" x2="2700.4" y2="936.5" stroke="#0F172A" stroke-width="1.3" />
+    <ellipse cx="2820" cy="910" rx="45.0" ry="17.0" fill="#CFD8DC" stroke="#455A64" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="2820" y="914" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">action</text>
+    <ellipse cx="2970" cy="930" rx="65.0" ry="17.0" fill="#CFD8DC" stroke="#455A64" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="2970" y="934" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">query_executed</text>
+    <ellipse cx="3000" cy="1020" rx="62.5" ry="17.0" fill="#CFD8DC" stroke="#455A64" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="3000" y="1024" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">performed_by</text>
+    <ellipse cx="2960" cy="1110" rx="50.0" ry="17.0" fill="#CFD8DC" stroke="#455A64" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="2960" y="1114" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">log_time</text>
+    <ellipse cx="400" cy="1100" rx="47.5" ry="16.0" fill="#D5F5E3" stroke="#1E8449" stroke-width="1.6" filter="url(#shadow-sm)" />
+    <text x="400" y="1104" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="normal" fill="#0F172A" text-anchor="middle">voted_at</text>
+</g>
+
+<!-- 5. Cardinality Badges Layer -->
+<g id="cardinalities-layer">
+    <rect x="512" y="208" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="530" y="222" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(1,1)</text>
+    <rect x="912" y="208" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="930" y="222" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(0,N)</text>
+    <rect x="1202" y="300" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="1220" y="314" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(0,N)</text>
+    <rect x="1802" y="530" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="1820" y="544" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(1,1)</text>
+    <rect x="1697" y="310" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="1715" y="324" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(0,N)</text>
+    <rect x="1902" y="500" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="1920" y="514" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(1,1)</text>
+    <rect x="2217" y="310" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="2235" y="324" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(0,N)</text>
+    <rect x="2017" y="500" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="2035" y="514" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(1,1)</text>
+    <rect x="2652" y="490" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="2670" y="504" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(0,N)</text>
+    <rect x="2122" y="610" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="2140" y="624" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(1,1)</text>
+    <rect x="1967" y="725" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="1985" y="739" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(1,1)</text>
+    <rect x="1972" y="915" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="1990" y="929" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(1,N)</text>
+    <rect x="417" y="350" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="435" y="364" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(1,1)</text>
+    <rect x="582" y="770" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="600" y="784" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(0,N)</text>
+    <rect x="452" y="800" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="470" y="814" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(0,N)</text>
+    <rect x="772" y="1060" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="790" y="1074" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(1,1)</text>
+    <rect x="417" y="860" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="435" y="874" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(0,N)</text>
+    <rect x="602" y="1090" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="620" y="1104" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(0,N)</text>
+    <rect x="722" y="1360" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="740" y="1374" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(0,N)</text>
+    <rect x="667" y="1590" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="685" y="1604" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(1,1)</text>
+    <rect x="862" y="1560" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="880" y="1574" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(1,1)</text>
+    <rect x="1582" y="1160" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="1600" y="1174" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(0,N)</text>
+    <rect x="1012" y="1350" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="1030" y="1364" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(0,N)</text>
+    <rect x="1302" y="1650" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="1320" y="1664" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(1,1)</text>
+    <rect x="1502" y="1570" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="1520" y="1584" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(1,1)</text>
+    <rect x="1822" y="1170" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="1840" y="1184" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(0,N)</text>
+    <rect x="1552" y="1718" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="1570" y="1732" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(0,1)</text>
+    <rect x="1872" y="1718" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="1890" y="1732" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(1,1)</text>
+    <rect x="1262" y="1195" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="1280" y="1209" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(0,N)</text>
+    <rect x="1862" y="1550" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="1880" y="1564" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(1,1)</text>
+    <rect x="2182" y="1718" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="2200" y="1732" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(0,1)</text>
+    <rect x="2512" y="1718" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="2530" y="1732" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(1,1)</text>
+    <rect x="2552" y="1600" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="2570" y="1614" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(1,1)</text>
+    <rect x="1382" y="1305" width="36" height="20" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.0" filter="url(#shadow-sm)" />
+    <text x="1400" y="1319" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">(0,N)</text>
+</g>
+
+</svg>

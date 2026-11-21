@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College E-Library System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- TOP NAVIGATION -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="brand">
+                <span class="brand-icon">📚</span>
+                <div>
+                    <h1 class="brand-title">College E-Library</h1>
+                    <span class="brand-subtitle">DBMS Database Project (Course Code: 24CS520)</span>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <!-- Clear SQL Logs Button -->
+                <button id="clear-logs-nav-btn" class="btn btn-outline-danger btn-sm" onclick="clearSqlLogs()" title="Clear and declutter SQL transaction logs">
+                    <span>🗑️</span> Clear Logs
+                </button>
+
+                <!-- Teacher Demo Tool Button -->
+                <button id="demo-tools-btn" class="btn btn-outline-warning" title="Open Teacher Demo Controls">
+                    <span>🎓</span> Teacher Demo Tools
+                </button>
+
+                <!-- User Profile / Session -->
+                <div id="user-badge" class="user-badge hidden">
+                    <div class="user-badge-left">
+                        <span id="user-role-pill" class="role-pill">STUDENT</span>
+                        <span id="user-usn" class="user-usn-badge">01JST24UCS001</span>
+                        <span id="user-name" class="user-name">Rahul Sharma</span>
+                    </div>
+                    <button id="logout-btn" class="btn btn-sm btn-ghost logout-btn" title="Logout">Logout</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- GLOBAL NOTIFICATION BANNER -->
+    <div id="global-alert" class="global-alert hidden"></div>
+
+    <main class="main-content">
+
+        <!-- ===================================================================
+             1. LOGIN SCREEN (USN & Password)
+             =================================================================== -->
+        <section id="login-view" class="view-section">
+            <div class="login-card">
+                <div class="login-header">
+                    <h2>Library Portal Authentication</h2>
+                    <p class="text-muted">Sign in using your University Serial Number (USN) and password</p>
+                </div>
+
+                <!-- 1-Click Quick Demo Accounts -->
+                <div class="demo-login-box">
+                    <label class="section-label">⚡ 1-Click Quick Demonstration Accounts:</label>
+                    <div class="demo-buttons-grid">
+                        <button class="btn btn-demo librarian-demo" onclick="quickLogin(1)">
+                            <strong>👩‍💼 Librarian (Admin)</strong>
+                            <small>USN: <code>01JSTLIB001</code> | Pass: <code>admin123</code></small>
+                            <small class="text-muted">Counter control & fine management</small>
+                        </button>
+                        <button class="btn btn-demo student-demo" onclick="quickLogin(2)">
+                            <strong>👨‍🎓 Student 1 (Rahul - CSE)</strong>
+                            <small>USN: <code>01JST24UCS001</code> | Pass: <code>pass123</code></small>
+                            <small class="text-muted">Clean account (0 books borrowed)</small>
+                        </button>
+                        <button class="btn btn-demo student-demo" onclick="quickLogin(3)">
+                            <strong>👩‍🎓 Student 2 (Priya - ECE)</strong>
+                            <small>USN: <code>01JST24UCS002</code> | Pass: <code>pass123</code></small>
+                            <small class="text-muted">Near limit (4/5 books borrowed)</small>
+                        </button>
+                        <button class="btn btn-demo student-demo" onclick="quickLogin(4)">
+                            <strong>👨‍🎓 Student 3 (Amit - MECH)</strong>
+                            <small>USN: <code>01JST24UCS003</code> | Pass: <code>pass123</code></small>
+                            <small class="text-muted">Clean account (Test Overdue with +35d tool)</small>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="login-divider"><span>OR SIGN IN MANUALLY</span></div>
+
+                <form id="custom-login-form" onsubmit="handleCustomLogin(event)">
+                    <div class="form-group">
+                        <label for="login-usn">University Serial Number (USN) / Staff ID</label>
+                        <input type="text" id="login-usn" placeholder="e.g. 01JST24UCS001 or 01JSTLIB001" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" placeholder="e.g. pass123 or admin123" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Sign In to Library</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             2. STUDENT DASHBOARD
+             =================================================================== -->
+        <section id="student-view" class="view-section hidden">
+            <!-- Student Header Stats -->
+            <div class="dashboard-header-card">
+                <div class="student-welcome">
+                    <h2 id="student-welcome-name">Welcome, Rahul Sharma</h2>
+                    <p class="text-muted">
+                        USN: <strong id="student-usn-display" style="color: var(--accent-blue);">01JST24UCS001</strong> | 
+                        Branch: <span id="student-branch-display">CSE</span> | 
+                        Sem: <span id="student-sem-display">5</span> | 
+                        Borrowing Limit: <strong>Max 5 Books</strong>
+                    </p>
+                </div>
+                <div class="stats-pills">
+                    <div class="stat-pill">
+                        <span class="stat-label">Borrowed Books</span>
+                        <span id="stat-borrowed-count" class="stat-value">0 / 5</span>
+                    </div>
+                    <div class="stat-pill">
+                        <span class="stat-label">Active Reservations</span>
+                        <span id="stat-reserved-count" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-pill" id="stat-fine-pill">
+                        <span class="stat-label">Unpaid Fines</span>
+                        <span id="stat-fine-amount" class="stat-value fine-clean">₹0.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Warning Banner for Reservation Penalty / Overdue Fines -->
+            <div id="student-penalty-banner" class="penalty-banner hidden"></div>
+
+            <!-- SECTION: MY BORROWED BOOKS (1-MONTH COUNTDOWN TIMER) -->
+            <div class="content-block">
+                <div class="block-header">
+                    <div>
+                        <h3>📖 My Borrowed Books (1-Month Due Countdown)</h3>
+                        <p class="text-muted">Live ticking countdown timer tracking loan period (Days, Hours, Minutes, Seconds). Overdue fine of ₹1/day applies.</p>
+                    </div>
+                </div>
+                <div id="my-loans-container" class="cards-grid">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <!-- SECTION: MY 12-HOUR RESERVATIONS -->
+            <div class="content-block">
+                <div class="block-header">
+                    <div>
+                        <h3>⏳ My Active Book Reservations (12-Hour Pickup Window)</h3>
+                        <p class="text-muted">You must physically visit the library counter to borrow within 12 hours, or reservation is cancelled with a 1-day penalty.</p>
+                    </div>
+                </div>
+                <div id="my-reservations-container" class="cards-grid">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <!-- SECTION: AVAILABLE BOOKS CATALOG WITH MULTI-LEVEL FILTERING -->
+            <div class="content-block">
+                <div class="block-header flex-between">
+                    <div>
+                        <h3>📚 Library Books Catalog (Categorical Search)</h3>
+                        <p class="text-muted">Filter by Engineering Branch, Subject, Genre, and Minimum Rating.</p>
+                    </div>
+                </div>
+
+                <!-- Categorical Filter Bar -->
+                <div class="filter-bar-card">
+                    <div class="filter-col">
+                        <label>Branch / Dept</label>
+                        <select id="filter-branch" onchange="applyCatalogFilters()">
+                            <option value="ALL">All Branches</option>
+                            <option value="CSE">CSE (Computer Science)</option>
+                            <option value="ECE">ECE (Electronics & Comm)</option>
+                            <option value="MECH">MECH (Mechanical)</option>
+                            <option value="CIVIL">CIVIL (Civil Engg)</option>
+                            <option value="EEE">EEE (Electrical)</option>
+                        </select>
+                    </div>
+                    <div class="filter-col">
+                        <label>Genre</label>
+                        <select id="filter-genre" onchange="applyCatalogFilters()">
+                            <option value="ALL">All Genres</option>
+                            <option value="Core Syllabus">Core Syllabus Textbook</option>
+                            <option value="Reference">Reference Guide & Manual</option>
+                            <option value="Computer Science">Computer Science & AI</option>
+                            <option value="Classic">Engineering Classic & History</option>
+                            <option value="Philosophy">Philosophy & Self-Development</option>
+                        </select>
+                    </div>
+                    <div class="filter-col">
+                        <label>Minimum Rating</label>
+                        <select id="filter-rating" onchange="applyCatalogFilters()">
+                            <option value="0">All Ratings</option>
+                            <option value="4.5">⭐ 4.5 & above</option>
+                            <option value="4.7">⭐ 4.7 & above</option>
+                            <option value="4.8">⭐ 4.8 & above</option>
+                        </select>
+                    </div>
+                    <div class="filter-col flex-2">
+                        <label>Search Title, Author, or ISBN</label>
+                        <input type="text" id="catalog-search" placeholder="🔍 Type search query..." oninput="applyCatalogFilters()">
+                    </div>
+                </div>
+
+                <div id="books-catalog-container" class="catalog-grid">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <!-- SECTION: REQUEST A BOOK NOT IN CATALOG -->
+            <div class="content-block">
+                <div class="block-header">
+                    <div>
+                        <h3>💡 Request a Missing Book</h3>
+                        <p class="text-muted">Suggest a book for acquisition. Other students can upvote or unvote it!</p>
+                    </div>
+                </div>
+                <div class="split-request-layout">
+                    <!-- Request Form -->
+                    <div class="card request-form-card">
+                        <h4>Suggest a New Title</h4>
+                        <form id="new-book-request-form" onsubmit="handleNewBookRequest(event)">
+                            <div class="form-group">
+                                <label>Book Title *</label>
+                                <input type="text" id="req-title" placeholder="e.g. Designing Data-Intensive Applications" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Author *</label>
+                                <input type="text" id="req-author" placeholder="e.g. Martin Kleppmann" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group flex-1">
+                                    <label>Branch</label>
+                                    <select id="req-branch">
+                                        <option value="CSE">CSE</option>
+                                        <option value="ECE">ECE</option>
+                                        <option value="MECH">MECH</option>
+                                        <option value="CIVIL">CIVIL</option>
+                                        <option value="EEE">EEE</option>
+                                    </select>
+                                </div>
+                                <div class="form-group flex-1">
+                                    <label>Genre</label>
+                                    <select id="req-genre">
+                                        <option value="Computer Science & AI">Computer Science & AI</option>
+                                        <option value="Core Syllabus Textbook">Core Syllabus</option>
+                                        <option value="Reference Guide & Manual">Reference Guide</option>
+                                        <option value="Engineering Classic & History">Engineering Classic</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Submit Acquisition Request</button>
+                        </form>
+                    </div>
+
+                    <!-- Existing Requests & Upvote/Unvote -->
+                    <div class="card request-list-card">
+                        <h4>Community Requests & Upvotes</h4>
+                        <div id="requests-list-container" class="requests-list">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             3. LIBRARIAN DASHBOARD
+             =================================================================== -->
+        <section id="librarian-view" class="view-section hidden">
+            <!-- Librarian Welcome & Revenue Widget -->
+            <div class="dashboard-header-card librarian-theme">
+                <div>
+                    <h2>👩‍💼 Librarian Management Console</h2>
+                    <p class="text-muted">Chief Librarian Portal (Staff ID: <code>01JSTLIB001</code>) | Circulation, Pickups, and Returns</p>
+                </div>
+                <div class="librarian-revenue-pill">
+                    <span class="stat-label">Total Fine Revenue Collected</span>
+                    <span id="librarian-total-revenue" class="revenue-val">₹0.00</span>
+                </div>
+            </div>
+
+            <!-- SECTION: HIGH DEMAND NOTIFICATION (DBMS VIEW) -->
+            <div class="content-block">
+                <div class="block-header">
+                    <div>
+                        <h3>🔥 High Demand Books (DBMS View: <code>HighDemandBooksView</code>)</h3>
+                        <p class="text-muted">Titles with 2+ borrows or 0 available copies. Alerts library staff to procure additional copies.</p>
+                    </div>
+                </div>
+                <div id="high-demand-container" class="high-demand-grid">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <!-- SECTION: PENDING 12-HOUR RESERVATIONS (STUDENTS AT COUNTER) -->
+            <div class="content-block">
+                <div class="block-header">
+                    <div>
+                        <h3>⏱️ Pending 12-Hour Reservations (Student Physical Pickups)</h3>
+                        <p class="text-muted">When a student arrives at the physical counter, approve their reservation to start their 30-day loan.</p>
+                    </div>
+                </div>
+                <div class="table-card">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Res #</th>
+                                <th>Student USN & Name</th>
+                                <th>Book Title</th>
+                                <th>Copy Code</th>
+                                <th>Reserved At</th>
+                                <th>Pickup Countdown Left</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="librarian-reservations-tbody">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- SECTION: DIRECT BOOK ISSUE AT COUNTER (WALK-IN) -->
+            <div class="content-block">
+                <div class="block-header">
+                    <div>
+                        <h3>➕ Issue Book at Counter (Walk-in Borrowing)</h3>
+                        <p class="text-muted">Enforces maximum 5-book limit and blocks students with overdue books/fines via DBMS Triggers.</p>
+                    </div>
+                </div>
+                <div class="card issue-book-card">
+                    <form id="issue-book-form" onsubmit="handleDirectIssue(event)" class="form-row">
+                        <div class="form-group flex-1">
+                            <label>Select Student *</label>
+                            <select id="issue-student-select" required>
+                                <option value="">-- Choose Student --</option>
+                            </select>
+                        </div>
+                        <div class="form-group flex-1">
+                            <label>Select Available Book Copy *</label>
+                            <select id="issue-copy-select" required>
+                                <option value="">-- Choose Available Copy --</option>
+                            </select>
+                        </div>
+                        <div class="form-group form-submit-col">
+                            <label>&nbsp;</label>
+                            <button type="submit" class="btn btn-primary btn-block">Issue Book (Start 30-Day Due Timer)</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- SECTION: ALL ACTIVE LOANS & RETURN PROCESSING -->
+            <div class="content-block">
+                <div class="block-header">
+                    <div>
+                        <h3>📋 All Active Loans Across Campus (On-Time Loans)</h3>
+                        <p class="text-muted">Track on-time 30-day loans and live countdowns. Overdue loans are automatically moved to the Overdue Fines Counter below.</p>
+                    </div>
+                </div>
+                <div class="table-card">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Loan #</th>
+                                <th>Student USN</th>
+                                <th>Student Name</th>
+                                <th>Book Title</th>
+                                <th>Copy Code</th>
+                                <th>Borrow Date</th>
+                                <th>Due Date / Countdown</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="librarian-loans-tbody">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- SECTION: OUTSTANDING FINES & REVENUE COLLECTION -->
+            <div class="content-block">
+                <div class="block-header">
+                    <div>
+                        <h3>💰 Outstanding Student Fines & Direct Fine Collection</h3>
+                        <p class="text-muted">All overdue loans and unpaid fines across campus. Process overdue return & collect ₹1/day fines in a single step!</p>
+                    </div>
+                </div>
+                <div class="table-card">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Student USN</th>
+                                <th>Student Name</th>
+                                <th>Overdue Book Title</th>
+                                <th>Copy Code</th>
+                                <th>Days Overdue</th>
+                                <th>Fine Amount</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="librarian-fines-tbody">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- SECTION: STUDENT BOOK ACQUISITION REQUESTS & PROCURING -->
+            <div class="content-block">
+                <div class="block-header">
+                    <div>
+                        <h3>📥 Student Book Purchase Requests</h3>
+                        <p class="text-muted">Librarian can approve and procure requested titles. Clicking "Approve & Procure" automatically adds the book and 2 copies to the catalog!</p>
+                    </div>
+                </div>
+                <div class="table-card">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Req #</th>
+                                <th>Requested Title</th>
+                                <th>Author</th>
+                                <th>Branch</th>
+                                <th>Suggested By</th>
+                                <th>Votes</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="librarian-requests-tbody">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===================================================================
+         TEACHER DEMO TOOLS MODAL (Time-Machine & SQL Workbench Logger)
+         =================================================================== -->
+    <div id="demo-modal" class="modal hidden">
+        <div class="modal-backdrop" onclick="toggleDemoModal()"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <div>
+                    <h3>🎓 Teacher Viva & Demonstration Controls</h3>
+                    <p class="text-muted">Simulate time edge-cases and inspect real-time MySQL statements</p>
+                </div>
+                <button class="modal-close" onclick="toggleDemoModal()">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <!-- Part 1: Time Machine Simulator -->
+                <div class="demo-section">
+                    <h4>⏱️ 1. Fast-Forward Time Machine</h4>
+                    <p class="text-sm">Demonstrate overdue fines and penalties on demand during your 5-minute viva:</p>
+                    
+                    <div class="simulator-buttons">
+                        <button class="btn btn-warning" onclick="triggerSimulation('fast_forward_35_days')">
+                            ⏩ Fast-Forward +35 Days (Triggers ₹1/Day Overdue Fine)
+                        </button>
+                        <button class="btn btn-warning" onclick="triggerSimulation('fast_forward_13_hours')">
+                            ⏩ Fast-Forward +13 Hours (Expires Reservations & 1-Day Block)
+                        </button>
+                        <button class="btn btn-outline-danger" onclick="triggerReset()">
+                            🔄 Reset All Data to Initial Seed State
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Part 2: Live SQL Logger for MySQL Workbench -->
+                <div class="demo-section">
+                    <div class="flex-between">
+                        <h4>🗄️ 2. Live MySQL Workbench SQL Stream</h4>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <button class="btn btn-sm btn-outline-danger" onclick="clearSqlLogs()">🗑️ Clear Logs</button>
+                            <button class="btn btn-sm btn-outline-primary" onclick="copySqlLogs()">📋 Copy All SQL</button>
+                        </div>
+                    </div>
+                    <p class="text-sm">Continuously appended to <code>live_dbms_transactions.sql</code>. Copy or execute directly in MySQL Workbench:</p>
+                    <div id="sql-log-terminal" class="sql-terminal">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

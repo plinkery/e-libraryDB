@@ -1,0 +1,6 @@
+=================================================================
+   COLLEGE E-LIBRARY PORTAL (DBMS 24CS520)
+   Local Access (Laptop):       http://localhost:8080
+   Mobile/Hotspot Access:       http://<windows-wifi-ip>:8080
+   Live DBMS Transactions Log:  live_dbms_transactions.sql & live_dbms_transaction.sql
+=================================================================
